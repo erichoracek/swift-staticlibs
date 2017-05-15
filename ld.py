@@ -13,7 +13,6 @@ def ld_command(arch, isysroot, library_search_path, linked_libraries, filelist,
         "-syslibroot", isysroot,
         "-L{}".format(library_search_path),
         "-filelist", filelist,
-    ] + ["-l{}".format(x) for x in linked_libraries] + [
         "-o", output,
     ]
 
